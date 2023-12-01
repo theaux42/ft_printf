@@ -6,12 +6,12 @@
 /*   By: tbabou <tbabou@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 07:08:38 by tbabou            #+#    #+#             */
-/*   Updated: 2023/12/01 00:00:47 by tbabou           ###   ########.fr       */
+/*   Updated: 2023/12/01 14:06:18 by tbabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <stdlib.h>

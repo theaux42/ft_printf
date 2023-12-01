@@ -6,7 +6,7 @@
 /*   By: tbabou <tbabou@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 06:54:26 by tbabou            #+#    #+#             */
-/*   Updated: 2023/12/01 14:06:34 by tbabou           ###   ########.fr       */
+/*   Updated: 2023/12/01 14:08:18 by tbabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,21 +71,4 @@ int	ft_printf(const char *format, ...)
 	printed += output_manager((char *)format, args);
 	va_end(args);
 	return (printed);
-}
-
-int	main(void)
-{
-	unsigned int	test;
-	int				first;
-	int				second;
-	int			*ptr;
-
-
-	test = 2147483647;
-	ptr = &test;
-	first = 0;
-	second = 0;
-	first = ft_printf("La valeur stockée à l'addresse %p est %d\n", ptr, *ptr);
-	second = printf("La valeur stockée à l'addresse %p est %d\n", ptr, *ptr);
-	ft_printf("\n\n1 => %i\n2 => %i", first, second);
 }

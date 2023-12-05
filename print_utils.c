@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_utils.c                                     :+:      :+:    :+:   */
+/*   print_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbabou <tbabou@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 08:30:29 by tbabou            #+#    #+#             */
-/*   Updated: 2023/12/01 14:06:34 by tbabou           ###   ########.fr       */
+/*   Updated: 2023/12/01 15:16:27 by tbabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,27 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
+char	*ft_uitoa(unsigned int n)
+{
+	char	*str;
+	int		j;
+
+	j = ft_uintlen(n) - 1;
+	str = (char *)malloc(sizeof(char) * (ft_uintlen(n) + 1));
+	if (!str)
+		return (NULL);
+	if (n == 0)
+		str[0] = '0';
+	str[j + 1] = '\0';
+	while (n)
+	{
+		str[j] = n % 10 + 48;
+		n = n / 10;
+		j--;
+	}
+	return (str);
+}
+
 int	ft_hexalen(uintptr_t ptr)
 {
 	int	len;
@@ -95,3 +116,17 @@ int	ft_intlen(int nbr)
 	}
 	return (len);
 }
+
+int	ft_uintlen(unsigned int nbr)
+{
+	int	len;
+
+	len = 0;
+	while (nbr)
+	{
+		nbr /= 10;
+		len++;
+	}
+	return (len);
+}
+

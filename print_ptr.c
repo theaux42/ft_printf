@@ -6,7 +6,7 @@
 /*   By: tbabou <tbabou@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 09:33:51 by tbabou            #+#    #+#             */
-/*   Updated: 2023/12/01 14:06:34 by tbabou           ###   ########.fr       */
+/*   Updated: 2023/12/01 15:00:26 by tbabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ int	ft_putptr(unsigned long long ptr)
 	int	print_length;
 
 	print_length = 0;
-	print_length += ft_putstr("0x");
 	if (ptr == 0)
-		print_length += ft_putchar('0');
+		print_length += ft_putstr("(nil)");
 	else
 	{
+		print_length += ft_putstr("0x");
 		ft_printptr(ptr);
 		print_length += ft_hexalen(ptr);
 	}

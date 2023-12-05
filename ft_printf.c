@@ -6,7 +6,7 @@
 /*   By: tbabou <tbabou@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 06:54:26 by tbabou            #+#    #+#             */
-/*   Updated: 2023/12/01 14:39:13 by tbabou           ###   ########.fr       */
+/*   Updated: 2023/12/01 15:04:21 by tbabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	variable_manager(char c, va_list arguments)
 	else if (c == 'p')
 		added += ft_putptr((unsigned long long)va_arg(arguments, void *));
 	else if (c == 'u')
-		added += ft_putnbr(va_arg(arguments, unsigned int));
+		added += ft_putunbr(va_arg(arguments, unsigned int));
 	else if (c == 'i' || c == 'd')
 		added += ft_putnbr(va_arg(arguments, int));
 	return (added);

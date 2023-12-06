@@ -6,7 +6,7 @@
 /*   By: tbabou <tbabou@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 06:54:26 by tbabou            #+#    #+#             */
-/*   Updated: 2023/12/01 15:04:21 by tbabou           ###   ########.fr       */
+/*   Updated: 2023/12/06 07:35:44 by tbabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ int	ft_printf(const char *format, ...)
 	int		printed;
 	va_list	args;
 
+	if (!format)
+		return (-1);
 	printed = 0;
 	va_start(args, format);
 	printed += output_manager((char *)format, args);
